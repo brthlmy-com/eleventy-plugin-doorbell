@@ -1,8 +1,8 @@
 {
-  "name": "@scope/plugin-name",
+  "name": "@brthlmy/eleventy-plugin-doorbell",
   "version": "1.0.0",
-  "description": "Description of plugin",
-  "homepage": "",
+  "description": "Eleventy plugin to include brthlmy headless analytics",
+  "homepage": "https://brthlmy.com?utm_source=package-json",
   "main": ".eleventy.js",
   "scripts": {
     "start": "eleventy --serve",
@@ -11,23 +11,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/username/repo-name.git"
+    "url": "git+https://github.com/brthlmy-com/eleventy-plugin-doorbell"
   },
-  "keywords": [
-    "11ty",
-    "11ty-plugin",
-    "eleventy",
-    "eleventy-plugin"
-  ],
+  "keywords": ["11ty", "11ty-plugin", "eleventy", "eleventy-plugin"],
   "author": {
-    "name": "username",
-    "url": "https://website.com"
+    "name": "Eric Bartholemy",
+    "url": "https://brthlmy.com"
   },
-  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/username/repo-name/issues"
+    "url": "https://github.com/brthlmy-com/eleventy-plugin-doorbell"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0"
+    "@11ty/eleventy": "^2.0.0",
+    "uglify-js": "^3.17.4"
   }
 }
