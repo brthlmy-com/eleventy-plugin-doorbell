@@ -17,10 +17,7 @@ Query String Parameters:
 * time: 1685557808
 
 ```bash
-// package.json
-{
-  @brthlmy/eleventy-plugin-doorbell": "git@github.com:brthlmy-com/eleventy-plugin-doorbell.git",
-}
+$ yarn add brthlmy-com/eleventy-plugin-doorbell
 ```
 
 Then, include it in your `.eleventy.js` config file:
