@@ -202,16 +202,19 @@ module.exports = (eleventyConfig, _options) => {
   eleventyConfig.addTransform('doorbell', (content, outputPath) => {
     if (outputPath && outputPath.endsWith('.html')) {
       return [
-        content.split('</head>').join(`</head>${noscript}`),
-        content.split('</body>').join(
-          `<script>${
-            UglifyJS.minify(script, {
-              ...MINIFY_OPTIONS,
-              compress: false,
-              mangle: { toplevel: true },
-            }).code
-          }</script></body>`,
-        ),
+        content
+          .split('</head>')
+          .join(`</head>${noscript}`)
+          .split('</body>')
+          .join(
+            `<script>${
+              UglifyJS.minify(script, {
+                ...MINIFY_OPTIONS,
+                compress: false,
+                mangle: {toplevel: true},
+              }).code
+            }</script></body>`,
+          ),
       ].join('');
     }
     return content;
