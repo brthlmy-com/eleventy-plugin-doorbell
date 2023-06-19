@@ -96,12 +96,8 @@ module.exports = (eleventyConfig, _options) => {
 
         append.scrolled = Math.max(0, scrolled, position());
         append.duration = seconds(start + msHidden);
-
-        if(nav.sendBeacon) {
-           nav.sendBeacon(api + "?" + stringify(append), { type: 'append' });
-        } else {
-          sendData(append);
-        }
+        
+        sendData(append);
       };
 
       var hiddenStart;
