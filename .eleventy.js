@@ -98,7 +98,7 @@ module.exports = (eleventyConfig, _options) => {
         append.duration = seconds(start + msHidden);
 
         if(nav.sendBeacon) {
-           nav.sendBeacon(api + "?" + stringify(append), { type: 'append' });
+           nav.sendBeacon(api + "?" + serialize(append));
         } else {
           sendData(append);
         }
